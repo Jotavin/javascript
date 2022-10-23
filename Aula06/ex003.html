@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body{
+            background-color: rgb(105, 105, 233);
+            color: white;
+            font: normal 20pt TimesNewRoman;   /*Comentário em .CSS*/
+
+        }
+        h1{
+            color: yellow
+        }
+    </style>
+</head> 
+<body> 
+    <h1>Olá, mundo!</h1>  <!--Comentário .HTML-->
+    <p>Maria bonita</p>
+
+    <script> 
+      var n1 = Number.parseInt(window.prompt('Digite um número: ')) // .prompt recebe string
+      var n2 = Number.parseInt(window.prompt('Digite outro número: ')) // Number.parseFloat ou Number
+      var soma = (n1 + n2)
+      window.alert(`A soma de ${n1} e ${n2} é igual a ${soma}`) // n.toString() ou String()
+      // (number + number) para adição
+      // (string + string) para concantenação
+    </script>
+</body>
+</html>
