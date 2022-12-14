@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Veficicador de Idade</title>
+        <style>
+            * {
+                margin: 0px; padding: 0px; 
+            }
+
+            body {
+                background-color: #4084D8;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h1 {
+                text-align: center;
+                color: white;
+                margin: 30px;
+            }
+
+            #main {
+                background-color: white;
+                width: 40%;
+                height: 400px;
+                /* position: relative;
+                left: 30%; */
+                margin: auto;
+                border-radius: 10px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.452);
+                font-family: 'Courier New', Courier, monospace;
+                padding: 25px;
+            }
+
+            #idade {
+               margin: 10px 0 20px 0;
+               
+            }
+
+            #genero {
+                margin: 10px 0 20px 0;
+            }
+
+            input[type=button]{
+                padding: 10px;
+                border: none;
+                background-color: #4084D8;
+                color: white;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Veficicador de Idade</h1>
+
+        <div id="main">
+            <form action="">
+                <div id="idade">
+                    <label for="a">Ano de Nascimento: </label>
+                    <input type="number" name="age" id="a" />
+                </div>
+                <div id="genero">
+
+                    <label for="gender">Gender:</label>
+                    <input type="radio" name="genderS" value="1" checked="checked"> Masculino</input>
+                    <input type="radio" name="genderS" value="0"> Feminino</input>
+                </div>
+                <input onclick="f()" type="button" value="Verificar">
+                <!-- <button onclick="f()">Verificar</button> -->
+            </form>
+            <div id="resultado">
+
+            </div>
+        </div>
+
+        <script>
+            function f() {
+                let i = document.getElementById('a').value;
+                i = 2022 - i;
+
+                // let g = document.querySelector('form[name="genderS"]:checked')
+                let g = Array.from(document.getElementsByName("genderS")).find(r => r.checked).value;
+                
+                var x
+               switch(g){
+                case 0: x = "Feminino"
+                    break
+                case 1: x = "Masculino"
+                    break
+               }
+
+                document.getElementById('resultado').innerHTML = `A sua idade é ${i} do sexo ${x}`    
+                console.log(i)
+                console.log(g)
+            }
+
+        </script>
+    </body>
+</html>
+
+
+
+<!-- Sexo:
+                    <input type="radio" id="masculino" name="gender" value="masculino" />
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" id="feminino" name="gender" />
+                    <label for="feminino">Feminino</label> -->
