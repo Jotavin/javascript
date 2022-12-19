@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota</title>
+</head>
+<body>
+    <h1>Notas</h1>
+    <input type="number" id="n1"> <input type="number" name="" id="n2">
+    <button id="btn">Calcular</button>
+    <div style="background-color: red;display: inline-block;" id="res"></div>
+
+    <script>
+        document.getElementById('btn').onclick = function()
+        {
+            let n1 = parseFloat(document.getElementById('n1').value)
+            let n2 = Number(document.getElementById('n2').value)
+            let soma = (n1 + n2)/2
+            if (soma == 10){
+                document.getElementById('res').innerHTML = `Aprovado com Distinção, média ${soma}`
+            }else if (soma >= 7){
+                document.getElementById('res').innerHTML = `Aprovado com média ${soma}`
+            }else if (soma < 7){
+                document.getElementById('res').innerHTML = `Reprovado com média ${soma}`
+            }
+        }
+    </script>
+</body>
+</html>

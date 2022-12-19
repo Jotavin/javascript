@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="input" >
+
+    </div>
+    <script>
+        var list = [
+    {
+        id: 1,
+        title: "Dope",
+        img: "pic/dope.jpg",
+        link: "dope.html"
+    },
+    {
+        id: 2,
+        title: "The Do Over",
+        img: "pic/The_Do-Over.png",
+        link: "The_Do-Over.html"
+    },
+    {
+        id: 3,
+        title: "Deadpool",
+        img: "pic/Deadpool.jpg",
+        link: "Deadpool.html"
+    },
+    {
+        id: 4,
+        title: "Johnny English Reborn",
+        img: "pic/johnny_english_reborn.jpg",
+        link: "johnny_english_reborn.html"
+    }
+];
+
+var input = document.getElementById("input");
+
+for (var i = 0; i <list.length; i++) {
+    var ul = document.createElement('ul');
+    var li = document.createElement('li');
+    var a = document.createElement("a");
+    var img = document.createElement("img");
+    var p = document.createElement('p');
+
+    p.title = list[i].title;
+    ul.appendChild(p);
+    img.src = list[i].img;
+    img.title = list[i].title;
+
+    a.href = list[i].link;    
+    a.appendChild(img);
+
+    li.id = list[i].id;
+    li.appendChild(a);
+    ul.appendChild(li);
+    console.log(ul);
+    input.appendChild(ul);
+};
+
+
+
+    </script>
+</body>
+</html>

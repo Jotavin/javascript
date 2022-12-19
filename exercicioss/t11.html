@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 20px;
+        }
+        #salario{
+            width: fit-content;
+            margin: auto;
+            padding: 20px;
+            background-color: rgb(173, 173, 173);
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+
+        li{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="salario">
+        <h1>Digite seu salário para receber o reajuste</h1>
+        <ul id="list">
+            
+        </ul>
+        <input type="number" id="number">
+        <button id="btn-check">Checar</button>
+    </div>
+
+    <script>
+        document.getElementById('btn-check').onclick = function(){
+            
+            let salario = Number(document.getElementById('number').value)
+            if(salario < 280){
+                let salarioN = (salario * 1.2)
+                let p = '20%'
+            }else if(salario <= 700){
+                let salarioN = (salario * 1.15);
+                let p = '15%'
+            }else if (salario <= 1500){
+                let salarioN = (salario * 1.1); 
+                let p = '10%'
+            }else if (salario > 1500){
+                let salarioN = (salario * 1.05)
+                let p = '5%'
+            }
+            let div = document.getElementById('list')
+            let li = document.createElement('li')
+            div.append()
+        }
+    </script>
+</body>
+</html>

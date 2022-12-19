@@ -77,21 +77,22 @@
 
         <script>
             function f() {
+                let date = Date(); date = date.getFullYear()
                 let i = document.getElementById('a').value;
-                i = 2022 - i;
+                i = date - i;
 
                 // let g = document.querySelector('form[name="genderS"]:checked')
-                let g = Array.from(document.getElementsByName("genderS")).find(r => r.checked).value;
+                // let g = Array.from(document.getElementsByName("genderS")).find(r => r.checked).value;
                 
-                var x
-               switch(g){
-                case 0: x = "Feminino"
-                    break
-                case 1: x = "Masculino"
-                    break
-               }
+            //     var x
+            //    switch(g){
+            //     case 0: x = "Feminino"
+            //         break
+            //     case 1: x = "Masculino"
+            //         break
+            //    }
 
-                document.getElementById('resultado').innerHTML = `A sua idade é ${i} do sexo ${x}`    
+                document.getElementById('resultado').innerHTML = `A sua idade é ${i}`    
                 console.log(i)
                 console.log(g)
             }

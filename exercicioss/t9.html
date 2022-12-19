@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <input type="number" id="n3">
+    <button id="btn-check">Verificar</button>
+
+    <script>
+        document.getElementById('btn-check').onclick = function()
+        {
+            let n1 = Number(document.getElementById('n1').value)
+            let n2 = Number(document.getElementById('n2').value)
+            let n3 = Number(document.getElementById('n3').value)
+            let aux = n1
+
+            if(n2 > n1){
+                aux = n2
+                n2 = n1
+                n1 = aux
+            }
+            if(n3 > n1){
+                aux = n3
+                n3 = n1
+                n1 = aux
+            }
+            if(n3 > n2){
+                aux = n3
+                n3 = n2
+                n2 = aux
+            }
+            alert(`${n1}, ${n2}, ${n3}`)
+        }
+    </script>
+</body>
+</html>

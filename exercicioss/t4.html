@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text">
+    <button id="btn">Verificar</button>
+    <script>
+        document.getElementById('btn').onclick = function(){
+            var l = document.getElementById('text').value.toLowerCase()
+            if (l.length > 1 || typeof l === "number"){
+                alert('[Erro]')
+            } else if (l == 'a' || l == 'e' || l == 'i' || l == 'o' || l == 'u'){
+                alert('É uma vogal')
+                console.log(typeof l)
+            } else {
+                alert('É uma consoante')
+                console.log(typeof l)
+            }
+            
+        }
+    </script>
+</body>
+</html>

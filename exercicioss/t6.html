@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="a">
+    <input type="number" id="b">
+    <input type="number" id="c">
+    <button id="btn-verify">Verificar</button>
+
+    <script>
+        
+        document.getElementById('btn-verify').onclick = function(){
+            let a = Number(document.getElementById('a').value)
+            let b = Number(document.getElementById('b').value)
+            let c = Number(document.getElementById('c').value)
+            let x = a
+            
+            if (x < b){
+                x = b
+            }if (c > x){
+                x = c
+            }
+            alert(`O maior número digitado foi ${x}`)
+        }
+    </script>
+</body>
+</html>
